@@ -1,2 +1,6 @@
 # BirdTrivia
-Name that bird!
+Small trivia game testing your birding skills!
+
+#Docker Support
+~WIP
+
