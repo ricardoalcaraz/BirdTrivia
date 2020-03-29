@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  birdtrivia:
+    image: ${DOCKER_REGISTRY-}birdtrivia
+    build:
+      context: .
+      dockerfile: ./Dockerfile
