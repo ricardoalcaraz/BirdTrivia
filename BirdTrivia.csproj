@@ -6,4 +6,9 @@
     <UserSecretsId>2b429b20-3e3a-42b0-86d8-6c188c662f1d</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Blazorise.Bootstrap" Version="0.8.8.4" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="0.8.8.4" />
+  </ItemGroup>
+
 </Project>
