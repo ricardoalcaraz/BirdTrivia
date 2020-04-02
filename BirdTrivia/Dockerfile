@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY BirdTrivia.csproj ./
-RUN dotnet restore "./BirdTrivia.csproj"
+COPY BirdTrivia/BirdTrivia.csproj BirdTrivia/
+RUN dotnet restore "BirdTrivia/BirdTrivia.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/BirdTrivia"
 RUN dotnet build "BirdTrivia.csproj" -c Release -o /app/build
 
 FROM build AS publish
