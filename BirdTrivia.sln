@@ -2,11 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29924.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdTrivia", "BirdTrivia.csproj", "{813B1C95-8ADF-4AEC-8067-AE4F09FDBB67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdTrivia", "BirdTrivia\BirdTrivia.csproj", "{813B1C95-8ADF-4AEC-8067-AE4F09FDBB67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "..\ServiceLayer\ServiceLayer.csproj", "{1EF89B3B-457A-4377-937F-16BD325A2223}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{1EF89B3B-457A-4377-937F-16BD325A2223}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataAccessLayer\DataAccessLayer.csproj", "{E7E2EA1C-7474-481D-9B31-0D817E0BF11B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{E7E2EA1C-7474-481D-9B31-0D817E0BF11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
