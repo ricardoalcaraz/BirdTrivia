@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   birdtrivia:
+    restart: always
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:80
