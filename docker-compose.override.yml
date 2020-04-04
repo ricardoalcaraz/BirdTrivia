@@ -11,3 +11,7 @@ services:
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+  db:
+    container_name: postgres-dev
+  db-admin:
+    container_name: pgadmin-dev

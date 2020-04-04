@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAccessLayer
+namespace DataAccessLayer.Models
 {
     public class User
     {
@@ -10,9 +10,8 @@ namespace DataAccessLayer
         [Required]
         public string Username { get; set; }
 
-        public User()
-        {
-            Id = Guid.NewGuid();
-        }
+        public int Streak { get; set; }
+
+        public bool IsExpert { get; set; }
     }
 }

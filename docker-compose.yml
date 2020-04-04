@@ -6,3 +6,25 @@ services:
     build:
       context: .
       dockerfile: ./BirdTrivia/Dockerfile
+  db:
+    build:
+      context: ./postgres/
+      dockerfile: ./Dockerfile
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      DB_MODE: ${DB_MODE}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  db-admin:
+    image: dpage/pgadmin4
+    ports:
+    - "5050:80"
+    volumes:
+    - db-admin:/pgdata
+    environment:
+    - PGADMIN_DEFAULT_EMAIL=${PGADMIN_EMAIL}
+    - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_PASSWORD}
+volumes:
+  db-data:
+  db-admin:

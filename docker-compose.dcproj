@@ -15,5 +15,10 @@
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
     <None Include="docker-compose.prod.yml" />
+    <None Include="postgres\postgresql.conf" />
+    <None Include="postgres\Dockerfile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="postgres\" />
   </ItemGroup>
 </Project>
