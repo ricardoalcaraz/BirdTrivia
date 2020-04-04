@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject Blazored.LocalStorage.ILocalStorageService localStore
 @using Blazorise
 
 <div class="container">
@@ -16,17 +17,35 @@
                     <form>
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" class="form-control" placeholder="Enter Username" />
+                            <input type="text" class="form-control" placeholder="Enter Username" @bind="user" />
                         </div>
                     </form>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="button" class="btn btn-primary btn-block">Enter</button>
+                    <button type="button" class="btn btn-primary btn-block" @onclick="UpdateLocalStorage">Enter</button>
                 </div>
             </div>
         </div>
         <div class="col-4"></div>
     </div>
 </div>
+
+@code{
+    const string usernameKey = "username";
+    string user { get; set; }
+    string usernameFromLocalStorage { get; set; }
+
+    // Due to pre-rendering in Blazor Server you can't perform JS interop until
+    // OnAfterRender lifecycle method
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        usernameFromLocalStorage = await localStore.GetItemAsync<string>(usernameKey);
+    }
+
+    public async Task UpdateLocalStorage()
+    {
+        await localStore.SetItemAsync(usernameKey, user);
+    }
+}
